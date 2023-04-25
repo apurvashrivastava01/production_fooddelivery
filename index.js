@@ -25,8 +25,8 @@ app.use("/categories", require("./routes/categoryRoutes"))
 app.use("/products", require("./routes/productRoutes"))
 app.use("/carts", require("./routes/cartRoutes"))
 app.use("/orders", require("./routes/orderRoutes"))
-app.use("*", function(req,res){
-    res.sendFile(path.join(__dirname,"./client/build/indexedDB.html"));
+app.get("*", function(req,res){
+    res.sendFile(path.join(__dirname,"./client/build/index.html"));
 });
 
 const PORT = process.env.PORT || 4000;
