@@ -5,12 +5,12 @@ const bodyParser = require('body-parser');
 require("./config/db")
 const cors = require('cors');
 const path=require('path');
-const fileURLToPath=require('url');
+// const fileURLToPath=require('url');
 // mongoose.connect('mongodb://localhost:27017/mern-ecommerce');
 
 // const app = express();
-const __filename=fileUrlToPath(import.meta.url);
- const __dirname= path.dirname(__filename);
+// const __filename=fileUrlToPath(import.meta.url);
+//  const __dirname= path.dirname(__filename);
 
 
 app.use(bodyParser.json());
