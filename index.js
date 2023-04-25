@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 require("./config/db")
 const cors = require('cors');
 const path=require('path');
+const morgan=required("morgan");
 // const fileURLToPath=require('url');
 // mongoose.connect('mongodb://localhost:27017/mern-ecommerce');
 
@@ -16,6 +17,7 @@ const path=require('path');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
+app.use(morgan("dev");
 app.use(express.statics(path.join(__dirname,'./client/build')))
 app.use("*", function(req,res){
     res.sendFile(path.join(__dirname,"./client/build/index.html"));
