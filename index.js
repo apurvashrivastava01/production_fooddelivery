@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 require("./config/db")
 const cors = require('cors');
 const path=require('path');
-const (fileURLToPath)=require('url');
+const {fileURLToPath}=require('url');
 // mongoose.connect('mongodb://localhost:27017/mern-ecommerce');
 
 const app = express();
